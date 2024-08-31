@@ -14,7 +14,7 @@ body.light-mode {
     padding: 0;
     transition: background 0.5s, color 0.5s;
     background: url('bg-desktop-light.jpg') no-repeat center center fixed;
-    background-size: ;
+    background-size: cover;
 }
 
 body.dark-mode {

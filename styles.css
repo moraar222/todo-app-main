@@ -1,10 +1,20 @@
-body {
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.5s, color 0.5s;
+    background: url('bg-mobile-light.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+body.light-mode {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     transition: background 0.5s, color 0.5s;
     background: url('bg-desktop-light.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-size: ;
 }
 
 body.dark-mode {

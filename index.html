@@ -23,20 +23,14 @@
       </div>
       <input type="text" class="new-todo" placeholder="Create a new todo..." />
       <div class="card">
-      <ul class="todo-list">
-        <li class="completed"><input type="checkbox" checked> Complete online JavaScript course</li>
-            <li><input type="checkbox"> Jog around the park 3x</li>
-            <li><input type="checkbox"> 10 minutes meditation</li>
-            <li><input type="checkbox"> Read for 1 hour</li>
-            <li><input type="checkbox"> Pick up groceries</li>
-            <li><input type="checkbox"> Complete Todo App on Frontend Mentor</li>
+      <ul class="todo-list" id="todo-list">
       </ul>
       <div class="footer">
         <span>5 items left</span>
         <div class="filters">
-          <button color="blue">All</button>
-          <button>Active</button>
-          <button>Completed</button>
+          <button id="all" color="blue">All</button>
+          <button id="active">Active</button>
+          <button id="completed">Completed</button>
         </div>
         <button class="clear-completed">Clear Completed</button>
       </div>

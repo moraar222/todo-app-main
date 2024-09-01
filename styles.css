@@ -1,53 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
     padding: 0;
-    transition: background 0.5s, color 0.5s;
-    background: url('bg-mobile-light.jpg') no-repeat center center fixed;
-    background-size: cover;
+    box-sizing: border-box;
+
 }
-
-
-body.light-mode {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    transition: background 0.5s, color 0.5s;
-    background: url('bg-desktop-light.jpg') no-repeat center center fixed;
-    background-size: cover;
+.background-image {
+    height: 40vh;
+    width: 100%;
+   position: fixed;
+   top:0%;
+   z-index: -1;
+   transition: background 0.5s, color 0.5s;
+   background-size: cover;  
 }
-
-body.dark-mode {
-    background: url('bg-desktop-dark.jpg') no-repeat center center fixed;
-    background-size: cover;
+.light-mode {
+    background: #f5f7ff;
+    color: #2e3a59;
+}
+.dark-mode {
+    background: #161722;
     color: white;
 }
 
-.container {
-    width: 300px;
-    margin: 100px auto;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ .light-mode > .background-image {
+    background: url('images/bg-desktop-light.jpg');
 }
 
-body.dark-mode .container {
-    background: rgba(0, 0, 0, 0.8);
+ .dark-mode > .background-image {
+    background: url('images/bg-desktop-dark.jpg');
 }
+#theme-switcher {
+    background-color: transparent;
+    border:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2px;
+    padding: 0%;
+}
+.container {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #f5f7ff;
+    width: 100%;
 }
 
 .new-todo {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    background-color: #f5f7ffe7;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
+}
+
+.dark-mode .new-todo {
+    background: #25273c;
+    color: white;
 }
 
 .todo-list {
@@ -64,6 +90,7 @@ body.dark-mode .container {
 }
 
 .todo-list li.completed {
+
     text-decoration: line-through;
     color: gray;
 }
@@ -85,4 +112,21 @@ body.dark-mode .container {
 
 .filters button:hover, .clear-completed:hover {
     text-decoration: underline;
+}
+.theme-switcher {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.card {
+    background: #f5f7ff;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+.dark-mode .card {
+    background: #25273c;
+    color: white;
 }

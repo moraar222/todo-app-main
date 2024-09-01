@@ -1,13 +1,17 @@
-function toggleTheme() {
-    const body = document.body;
-    const themeSwitcher = document.querySelector('.theme-switcher');
+const themeSwitcher = document.querySelector('#theme-switcher');
+const themeimage = document.querySelector('#theme-image');
 
-    body.classList.toggle('dark-mode');
+themeSwitcher.addEventListener('click', () => {
+  if (document.body.classList.contains('dark-mode')) {
+    document.body.classList.remove('dark-mode');
+    document.body.classList.add('light-mode');
+    themeimage.src = 'images/icon-moon.svg';
+  } else {
+    document.body.classList.remove('light-mode');
+    document.body.classList.add('dark-mode');
+    themeimage.src = 'images/icon-sun.svg';
+  }
 
-    // Change icon based on the current theme
-    if (body.classList.contains('dark-mode')) {
-        themeSwitcher.textContent = '☀️'; // Sun icon for dark mode
-    } else {
-        themeSwitcher.textContent = '🌙'; // Moon icon for light mode
-    }
-}
+ 
+});
+

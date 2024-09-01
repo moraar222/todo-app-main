@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="light-mode">
+    <div class="background-image"></div>
+
     <div class="container">
-        <div class="header">
-            <h1>TODO</h1>
-            <button class="theme-switcher" onclick="toggleTheme()">☀️</button>
-        </div>
-        <input type="text" class="new-todo" placeholder="Create a new todo...">
-        <ul class="todo-list">
-            <li class="completed"><input type="checkbox" checked> Complete online JavaScript course</li>
+      <div class="header">
+        <h1>TODO</h1>
+        <button
+          class="theme-switcher"
+          onclick="toggleTheme()"
+          id="theme-switcher"
+        >
+          <img id="theme-image" src="images/icon-moon.svg" alt="moon icon" />
+        </button>
+      </div>
+      <input type="text" class="new-todo" placeholder="Create a new todo..." />
+      <div class="card">
+      <ul class="todo-list">
+        <li class="completed"><input type="checkbox" checked> Complete online JavaScript course</li>
             <li><input type="checkbox"> Jog around the park 3x</li>
             <li><input type="checkbox"> 10 minutes meditation</li>
             <li><input type="checkbox"> Read for 1 hour</li>
             <li><input type="checkbox"> Pick up groceries</li>
             <li><input type="checkbox"> Complete Todo App on Frontend Mentor</li>
-        </ul>
-        <div class="footer">
-            <span>5 items left</span>
-            <div class="filters">
-                <button color="blue">All</button>
-                <button>Active</button>
-                <button>Completed</button>
-            </div>
-            <button class="clear-completed">Clear Completed</button>
+      </ul>
+      <div class="footer">
+        <span>5 items left</span>
+        <div class="filters">
+          <button color="blue">All</button>
+          <button>Active</button>
+          <button>Completed</button>
         </div>
+        <button class="clear-completed">Clear Completed</button>
+      </div>
     </div>
+</div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

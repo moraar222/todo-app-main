@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Event listener for clearing all completed to-dos
   clearCompletedButton.addEventListener('click', () => {
     // Remove all to-dos with a 'completed' status
-    todos = todos.filter(todo => todo.status !== '');
+    todos = todos.filter(todo => todo.status !== 'completed');
     // Re-render the to-dos
     renderTodos();
   });
